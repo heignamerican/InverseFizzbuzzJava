@@ -1,28 +1,21 @@
 package heignamerican.InverseFizzbuzz.logic;
 
 import heignamerican.InverseFizzbuzz.Fizzbuzz;
-import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 import heignamerican.InverseFizzbuzz.Result;
 
-public class TetsuzukiInverseFizzbuzz implements InverseFizzbuzz {
-	private final int MIN;
-	private final int MAX;
+public class TetsuzukiInverseFizzbuzz extends AbstractInverseFizzbuzzLogic {
 	private final int LOWER;
 	private final int UPPER;
 
 	public TetsuzukiInverseFizzbuzz(int aMin, int aMax) {
-		MIN = aMin;
-		MAX = aMax;
+		super(aMin, aMax);
 
 		LOWER = MIN - 1;
 		UPPER = MAX + 1;
 	}
 
 	@Override
-	public Result get(final Fizzbuzz... aInput) {
-		if (aInput.length == 0)
-			throw new IllegalArgumentException();
-
+	public Result getReal(final Fizzbuzz... aInput) {
 		int tMin = LOWER;
 		int tMax = UPPER;
 

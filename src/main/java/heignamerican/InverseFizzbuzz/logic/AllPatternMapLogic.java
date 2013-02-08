@@ -1,9 +1,7 @@
 package heignamerican.InverseFizzbuzz.logic;
 
 import static heignamerican.InverseFizzbuzz.Fizzbuzz.*;
-
 import heignamerican.InverseFizzbuzz.Fizzbuzz;
-import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 import heignamerican.InverseFizzbuzz.Result;
 
 import java.util.ArrayList;
@@ -12,23 +10,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AllPatternMapLogic implements InverseFizzbuzz {
-	private final int MIN;
-	private final int MAX;
+public class AllPatternMapLogic extends AbstractInverseFizzbuzzLogic {
 	private final Map<String, Result> mMap;
 
 	public AllPatternMapLogic(int aMin, int aMax) {
-		MIN = aMin;
-		MAX = aMax;
+		super(aMin, aMax);
 
 		mMap = createMap();
 	}
 
 	@Override
-	public Result get(Fizzbuzz... aInput) {
-		if (aInput.length == 0)
-			throw new IllegalArgumentException();
-
+	public Result getReal(Fizzbuzz... aInput) {
 		String tInputFizzbuzzString = toString(aInput);
 
 		if (!mMap.containsKey(tInputFizzbuzzString)) {
