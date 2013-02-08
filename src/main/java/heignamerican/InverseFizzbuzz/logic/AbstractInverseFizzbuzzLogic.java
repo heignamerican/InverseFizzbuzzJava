@@ -8,9 +8,9 @@ public abstract class AbstractInverseFizzbuzzLogic implements InverseFizzbuzz {
 	protected final int MIN;
 	protected final int MAX;
 
-	public AbstractInverseFizzbuzzLogic(int aMIN, int aMAX) {
-		MIN = aMIN;
-		MAX = aMAX;
+	public AbstractInverseFizzbuzzLogic(int aMin, int aMax) {
+		MIN = aMin;
+		MAX = aMax;
 	}
 
 	public final Result get(Fizzbuzz... aInput) {
