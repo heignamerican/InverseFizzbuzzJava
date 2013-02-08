@@ -1,10 +1,10 @@
 package heignamerican.InverseFizzbuzz.logic;
 
-import org.junit.Before;
+import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 
 public class TetsuzukiInverseFizzbuzzTest extends InverseFizzbuzzTest {
-	@Before
-	public void setUp() {
-		mInverseFizzbuzz = new TetsuzukiInverseFizzbuzz(MIN, MAX);
+	@Override
+	protected InverseFizzbuzz create() {
+		return new TetsuzukiInverseFizzbuzz(MIN, MAX);
 	}
 }

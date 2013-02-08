@@ -6,6 +6,7 @@ import static org.hamcrest.MatcherAssert.*;
 import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 import heignamerican.InverseFizzbuzz.Result;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public abstract class InverseFizzbuzzTest {
@@ -13,6 +14,11 @@ public abstract class InverseFizzbuzzTest {
 	protected static final int MAX = 100;
 
 	protected InverseFizzbuzz mInverseFizzbuzz;
+
+	@Before
+	public void setUp() {
+		mInverseFizzbuzz = create();
+	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testDame() {
@@ -33,4 +39,5 @@ public abstract class InverseFizzbuzzTest {
 		assertThat(mInverseFizzbuzz.get(FIZZ, FIZZ, BUZZ), is(Result.result(6, 10)));
 	}
 
+	protected abstract InverseFizzbuzz create();
 }

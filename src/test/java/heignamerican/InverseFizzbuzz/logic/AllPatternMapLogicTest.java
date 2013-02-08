@@ -1,10 +1,9 @@
 package heignamerican.InverseFizzbuzz.logic;
 
-import org.junit.Before;
+import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 
 public class AllPatternMapLogicTest extends InverseFizzbuzzTest {
-	@Before
-	public void setUp() {
-		mInverseFizzbuzz = new AllPatternMapLogic(MIN, MAX);
+	protected InverseFizzbuzz create() {
+		return new AllPatternMapLogic(MIN, MAX);
 	}
 }
