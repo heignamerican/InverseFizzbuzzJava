@@ -57,5 +57,10 @@
 			<artifactId>hamcrest-all</artifactId>
 			<version>1.3</version>
 		</dependency>
+		<dependency>
+			<groupId>heignamerican</groupId>
+			<artifactId>myutils</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>
 </project>
