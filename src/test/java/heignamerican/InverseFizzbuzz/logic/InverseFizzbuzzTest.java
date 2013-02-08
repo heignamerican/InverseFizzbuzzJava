@@ -17,7 +17,7 @@ public abstract class InverseFizzbuzzTest {
 
 	@Before
 	public void setUp() {
-		mInverseFizzbuzz = create();
+		mInverseFizzbuzz = create(MIN, MAX);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
@@ -39,5 +39,5 @@ public abstract class InverseFizzbuzzTest {
 		assertThat(mInverseFizzbuzz.get(FIZZ, FIZZ, BUZZ), is(Result.result(6, 10)));
 	}
 
-	protected abstract InverseFizzbuzz create();
+	protected abstract InverseFizzbuzz create(int aMin, int aMax);
 }

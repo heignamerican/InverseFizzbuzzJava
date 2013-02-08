@@ -3,7 +3,8 @@ package heignamerican.InverseFizzbuzz.logic;
 import heignamerican.InverseFizzbuzz.InverseFizzbuzz;
 
 public class AllPatternMapLogicTest extends InverseFizzbuzzTest {
-	protected InverseFizzbuzz create() {
-		return new AllPatternMapLogic(MIN, MAX);
+	@Override
+	protected InverseFizzbuzz create(int aMin, int aMax) {
+		return new AllPatternMapLogic(aMin, aMax);
 	}
 }
