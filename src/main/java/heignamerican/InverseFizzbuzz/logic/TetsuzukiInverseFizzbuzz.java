@@ -30,8 +30,8 @@ public class TetsuzukiInverseFizzbuzz implements InverseFizzbuzz {
 			int tIndex = 0;
 
 			for (int tNumber = tStart; tNumber < MAX; tNumber++) {
-				if (isFizzbuzz(tNumber)) {
-					if (aInput[tIndex].equals(toFizzbuzz(tNumber))) {
+				if (Fizzbuzz.isFizzbuzz(tNumber)) {
+					if (aInput[tIndex].equals(Fizzbuzz.toFizzbuzz(tNumber))) {
 						tIndex++;
 						if (tIndex == aInput.length) {
 							final int tCurrentHaba = tMax - tMin + 1;
@@ -56,19 +56,5 @@ public class TetsuzukiInverseFizzbuzz implements InverseFizzbuzz {
 		if (tMin == LOWER || tMax == UPPER)
 			return Result.none();
 		return Result.result(tMin, tMax);
-	}
-
-	public static boolean isFizzbuzz(int aNumber) {
-		return aNumber % 3 == 0 || aNumber % 5 == 0;
-	}
-
-	public static Fizzbuzz toFizzbuzz(int aNumber) {
-		if (aNumber % 15 == 0)
-			return Fizzbuzz.FIZZBUZZ;
-		if (aNumber % 3 == 0)
-			return Fizzbuzz.FIZZ;
-		if (aNumber % 5 == 0)
-			return Fizzbuzz.BUZZ;
-		throw new IllegalArgumentException();
 	}
 }

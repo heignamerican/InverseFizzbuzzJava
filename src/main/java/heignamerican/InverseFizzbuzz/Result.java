@@ -31,4 +31,8 @@ public class Result {
 			return String.format("[%d]", start);
 		return String.format("[%d,%d]", start, end);
 	}
+
+	public int getLength() {
+		return end - start + 1;
+	}
 }
